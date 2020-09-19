@@ -1,7 +1,6 @@
 {
-  "name": "ajs",
+  "name": "ajs-hw-prototypes-1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
@@ -33,9 +32,18 @@
     "mini-css-extract-plugin": "^0.9.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "core-js": "^3.6.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickupx/ajs-hw-prototypes-1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nickupx/ajs-hw-prototypes-1/issues"
+  },
+  "homepage": "https://github.com/nickupx/ajs-hw-prototypes-1#readme",
+  "description": ""
 }
