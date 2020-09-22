@@ -59,6 +59,12 @@ test('should level up', () => {
   });
 });
 
+test('should not level up', () => {
+  const result = new Character('Somebody', 'Swordsman');
+  result.health = 0;
+  expect(() => result.levelUp()).toThrow('already dead');
+});
+
 test('should damage', () => {
   const result = new Character('Somebody', 'Swordsman');
   result.damage(5);
