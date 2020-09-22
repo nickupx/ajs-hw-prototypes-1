@@ -50,3 +50,25 @@ test('short name', () => {
 test('wrong type', () => {
   expect(() => new Character('Igor', 'Programmer')).toThrow('Incorrect parameters');
 });
+
+test('should level up', () => {
+  const result = new Character('Somebody', 'Swordsman');
+  result.levelUp();
+  expect(result).toEqual({
+    name: 'Somebody', type: 'Swordsman', health: 100, level: 2, attack: 48, defence: 12,
+  });
+});
+
+test('should damage', () => {
+  const result = new Character('Somebody', 'Swordsman');
+  result.damage(5);
+  expect(result).toEqual({
+    name: 'Somebody', type: 'Swordsman', health: 95.5, level: 1, attack: 40, defence: 10,
+  });
+});
+
+test('should be dead', () => {
+  const result = new Character('Somebody', 'Swordsman');
+  result.health = 0;
+  expect(() => result.damage(10)).toThrow('already dead');
+});
