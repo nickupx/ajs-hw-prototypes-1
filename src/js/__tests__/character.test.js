@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import Character from '../app';
+import Character from '../character';
 
 test('should create', () => {
   const result = new Character('Gandalf', 'Magician');
@@ -25,7 +25,7 @@ test('should create', () => {
 test('should create', () => {
   const result = new Character('Somebody', 'Daemon');
   expect(result).toEqual({
-    name: 'Somebody', type: 'Daemon', health: 100, level: 1, attack: 10, defence: 40,
+    name: 'Somebody', health: 100, level: 1, attack: 10, type: 'Daemon', defence: 40,
   });
 });
 
@@ -43,10 +43,10 @@ test('should create', () => {
   });
 });
 
-test('should error', () => {
+test('short name', () => {
   expect(() => new Character('V', 'Zombie')).toThrow('Incorrect parameters');
 });
 
-test('should error', () => {
+test('wrong type', () => {
   expect(() => new Character('Igor', 'Programmer')).toThrow('Incorrect parameters');
 });
