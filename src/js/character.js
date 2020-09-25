@@ -81,3 +81,6 @@ export class Zombie extends Character {
     this.defence = 10;
   }
 }
+
+window.Character = Character;
+window.Bowman = Bowman;
